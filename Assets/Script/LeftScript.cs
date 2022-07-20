@@ -6,7 +6,7 @@ public class LeftScript : MonoBehaviour
 {
     public Rigidbody2D rb;
     SpawnController spawnController;
-    float speedObject = 55;
+    public float speedObject = 25;
 
     void Update()
     {
