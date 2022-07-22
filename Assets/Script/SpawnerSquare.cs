@@ -27,7 +27,7 @@ public class SpawnerSquare : MonoBehaviour
             Destroy(collision.collider.gameObject);
             if (Soldierİnt == 0)
             {
-                Time.timeScale = 0;
+                
                 FinishScreen.SetActive(true);
             }
 
@@ -43,9 +43,5 @@ public class SpawnerSquare : MonoBehaviour
     {
         source.Play();
     }
-    public void Restart()
-    {
-
-        SceneManager.LoadScene(0);
-    }
+    
 }
