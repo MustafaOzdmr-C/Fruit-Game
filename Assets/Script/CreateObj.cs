@@ -5,7 +5,7 @@ using UnityEngine;
 public class CreateObj : MonoBehaviour
 
 {
-    public GameObject spawnOBJ;
+    public GameObject spawnOBJ; 
     float x;
     float y;
     Vector2 pos;
@@ -16,7 +16,7 @@ public class CreateObj : MonoBehaviour
 
     public void CreateSpawnObj()
     {      
-            x = Random.Range(-11.23f, 9.14f);
+            x = Random.Range(-9.23f, 9.14f);
             y = Random.Range(10.04f, 10.06f);
 
             pos = new Vector2(x, y);

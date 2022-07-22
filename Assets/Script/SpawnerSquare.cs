@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 using UnityEngine.SceneManagement;
 
 public class SpawnerSquare : MonoBehaviour
@@ -22,10 +21,9 @@ public class SpawnerSquare : MonoBehaviour
         if (gameObject.tag == "Dont Blocked")
         {
             Debug.Log("-");
-            source.Play();
+            PlaySoundDown();
+            ScoreDown();
             create.CreateSpawnObj();
-            Soldierİnt--;
-            SoldierText.text = Soldierİnt.ToString();
             Destroy(collision.collider.gameObject);
             if (Soldierİnt == 0)
             {
@@ -34,11 +32,17 @@ public class SpawnerSquare : MonoBehaviour
             }
 
         }
-       
-
 
     }
-
+    public void ScoreDown()
+    {
+        Soldierİnt--;
+        SoldierText.text = Soldierİnt.ToString();
+    }
+    public void PlaySoundDown()
+    {
+        source.Play();
+    }
     public void Restart()
     {
 

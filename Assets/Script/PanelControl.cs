@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PanelControl : MonoBehaviour
@@ -8,7 +9,11 @@ public class PanelControl : MonoBehaviour
     public GameObject settingPanel;
     public GameObject gamePanel;
     public GameObject menuPanel;
- 
+    public Text katText;
+    public Text anaText;
+    public string katStr;
+    public string anaStr;
+
     [SerializeField] private CreateObj createOBJ;
     
     public void Start()
@@ -20,6 +25,10 @@ public class PanelControl : MonoBehaviour
     {
         gamePanel.SetActive(true);
         menuPanel.SetActive(false);
+
+        katText.enabled = false;
+        anaText.enabled = false;
+
 
         createOBJ.CreateSpawnObj();
     }
@@ -33,6 +42,10 @@ public class PanelControl : MonoBehaviour
         settingPanel.SetActive(false);
     }
 
+    public void pause()
+    {
+
+    }
 
 
 }
